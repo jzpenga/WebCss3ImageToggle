@@ -70,6 +70,7 @@
     height: 100%;
     float: left;
     position: relative;
+    overflow: hidden;
 }
 
 .image-ctr .img-part div span {
@@ -80,6 +81,7 @@
     left: -150px;
     text-indent: -9999rem;
     z-index: 0;
+    transition: left  0.5s ease-in-out ;
 }
 
 .image-ctr input:nth-child(1):checked ~ .img-part,
@@ -118,21 +120,28 @@
     background-position: -450px 0;
 }
 
-.image-ctr input:nth-child(1):checked ~  .img-part div span:nth-child(1){
-    z-index: 5;
-}
-
-.image-ctr input:nth-child(3):checked ~  .img-part div span:nth-child(2){
-    z-index: 5;
-}
-
-.image-ctr input:nth-child(5):checked ~  .img-part div span:nth-child(3){
-    z-index: 5;
-}
-
+.image-ctr input:nth-child(1):checked ~  .img-part div span:nth-child(1),
+.image-ctr input:nth-child(3):checked ~  .img-part div span:nth-child(2),
+.image-ctr input:nth-child(5):checked ~  .img-part div span:nth-child(3),
 .image-ctr input:nth-child(7):checked ~  .img-part div span:nth-child(4){
     z-index: 5;
+    left: 0;
+    animation: none;
 }
+
+.image-ctr input:checked ~  .img-part div span{
+    animation: sliceOut 0.5s ease-in-out;
+}
+
+@keyframes sliceOut {
+    from{
+        left: 0;
+    }
+    to{
+        left: 150px;
+    }
+}
+
 
 
 
