@@ -1,0 +1,143 @@
+.image-ctr {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    margin: 20px auto auto;
+    text-align: center;
+    position: relative;
+}
+
+.image-ctr input {
+    display: none;
+}
+
+.image-ctr label {
+    height: 30px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+    margin-top: 350px;
+    position: relative;
+    z-index: 10;
+}
+
+.image-ctr label:before {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.image-ctr input:checked + label:before {
+    background: rgba(0, 255, 255, 0.5);
+}
+
+.image-ctr label:after {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 370px;
+    position: absolute;
+    right: 0;
+    top: -350px;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.image-ctr label:nth-child(8):after {
+    display: none;
+}
+
+.image-ctr .img-part {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image-ctr .img-part div {
+    width: 25%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.image-ctr .img-part div span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -150px;
+    text-indent: -9999rem;
+    z-index: 0;
+}
+
+.image-ctr input:nth-child(1):checked ~ .img-part,
+.image-ctr .img-part div span:nth-child(1) {
+    background: url("../images/1.jpg");
+}
+
+.image-ctr input:nth-child(3):checked ~ .img-part,
+.image-ctr .img-part div span:nth-child(2) {
+    background: url("../images/2.jpg");
+}
+
+.image-ctr input:nth-child(5):checked ~ .img-part,
+.image-ctr .img-part div span:nth-child(3) {
+    background: url("../images/3.jpg");
+}
+
+.image-ctr input:nth-child(7):checked ~ .img-part,
+.image-ctr .img-part div span:nth-child(4) {
+    background: url("../images/4.jpg");
+}
+
+.image-ctr .img-part div:nth-child(1) span {
+    background-position: 0;
+}
+
+.image-ctr .img-part div:nth-child(2) span {
+    background-position: -150px 0;
+}
+
+.image-ctr .img-part div:nth-child(3) span {
+    background-position: -300px 0;
+}
+
+.image-ctr .img-part div:nth-child(4) span {
+    background-position: -450px 0;
+}
+
+.image-ctr input:nth-child(1):checked ~  .img-part div span:nth-child(1){
+    z-index: 5;
+}
+
+.image-ctr input:nth-child(3):checked ~  .img-part div span:nth-child(2){
+    z-index: 5;
+}
+
+.image-ctr input:nth-child(5):checked ~  .img-part div span:nth-child(3){
+    z-index: 5;
+}
+
+.image-ctr input:nth-child(7):checked ~  .img-part div span:nth-child(4){
+    z-index: 5;
+}
+
+
+
+
+
+
+
+

@@ -7,7 +7,6 @@ header{
     width: 450px;
     height: 300px;
     overflow: hidden;
-    background: url("../images/3.jpg");
     margin: 20px auto auto;
     text-align: center;
     position: relative;
@@ -53,6 +52,36 @@ header{
 .image-ctr .img-part-2,
 .image-ctr .img-part-3,
 .image-ctr .img-part-4{
+    width: 25%;
     float: left;
+    height: 100%;
+    position: relative;
 }
 
+.image-ctr .img-part-1 span,
+.image-ctr .img-part-2 span,
+.image-ctr .img-part-3 span,
+.image-ctr .img-part-4 span{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.image-ctr .img-part > div:after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 260px;
+    background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.image-ctr .img-part >div:nth-child(4):after{
+   display: none;
+}
+
+.image-ctr .img-toggle div:nth-child(1)>input:checked{
+    background: url("../images/1.jpg");
+}
